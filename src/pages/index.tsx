@@ -83,7 +83,7 @@ export default function Home() {
           )}
           {/* rgb(85, 100, 88) */}
           {/* my-12 */}
-          <div className={` relative font-mon italic font-bold text-center text-GREY2 lg:text-3xl md:text-xl sm:text-lg my-[1.5%]`}>Yields so good, like you milkin' it. </div>
+          <div className={` relative font-mon italic font-bold text-center text-GREY2 lg:text-3xl md:text-xl sm:text-lg my-[1.5%]`}>Yields so good, like you milkin&apos; it. </div>
           <div className={` relative flex justify-center items-center flex-col lg:text-3xl md:text-xl sm:text-lg `}>
             <Tooltip overlayInnerStyle={{
               backgroundColor: "white",
