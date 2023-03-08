@@ -12,6 +12,8 @@ export default function useWindowSize() {
   });
 
   const [isMobile, setIsMobile] = useState(false);
+  const [isLandscape, setLandscape] = useState<boolean>(false);
+
 
   useEffect(() => {
     // if(typeof window === "undefined") return;
@@ -30,6 +32,14 @@ export default function useWindowSize() {
       } else {
         setIsMobile(false)
       }
+      console.log("screen")
+      console.log(screen.availHeight, screen.availWidth)
+      if (screen.availHeight < screen.availWidth){
+        setLandscape(true);
+      } else {
+        setLandscape(false);
+      }
+
     }
 
     // Add event listener
@@ -44,6 +54,7 @@ export default function useWindowSize() {
 
   return {
     windowSize,
-    isMobile
+    isMobile,
+    isLandscape
   };
 }

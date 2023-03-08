@@ -19,7 +19,8 @@ module.exports = {
       },
       screens:{
         'small_hp': '400px',
-        'md': { 'raw': '(min-width: 768px or min-height: 768px)' }
+        'md': { 'raw': '(min-width: 768px and min-height: 640px)' },
+        'lg': {'raw': '(min-width: 1024px and min-height: 768px)'}
       }
     },
   },
