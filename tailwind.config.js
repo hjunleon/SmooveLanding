@@ -18,7 +18,8 @@ module.exports = {
         GREEN2: "#00C49C",
       },
       screens:{
-        'small_hp': '400px'
+        'small_hp': '400px',
+        'md': { 'raw': '(min-width: 768px or min-height: 768px)' }
       }
     },
   },
