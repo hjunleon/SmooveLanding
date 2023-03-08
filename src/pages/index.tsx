@@ -69,8 +69,8 @@ export default function Home() {
             <div className='font-arcade_gamer text-black text-center ' style={{
               textShadow: "rgb(104, 136, 255) 3px 3px 0px"
             }}>
-              <h1 className='  text-6xl z-auto'>SMOOVE</h1>
-              <h2 className=' text-3xl z-auto'>FINANCE</h2>
+              <h1 className=' md:text-8xl text-6xl z-auto'>SMOOVE</h1>
+              <h2 className=' md:text-5xl text-3xl z-auto'>FINANCE</h2>
             </div>
           ) : (
 
@@ -94,7 +94,7 @@ export default function Home() {
               fontStyle: "italic",
               // fontWeight: "bold"
             }} placement="right" overlay={<span> Coming Soon! </span>}>
-              <button className={`relative rounded-full block md:p-4 p-3 sm:my-4 my-1 font-arcade_gamer bg-GREEN1 text-GREEN2 ${isDisabled ? "brightness-95 cursor-not-allowed" : ""} `}>
+              <button className={`relative rounded-full block md:p-4 p-3 lg:my-4 md:my-2 my-1 font-arcade_gamer bg-GREEN1 text-GREEN2 ${isDisabled ? "brightness-95 cursor-not-allowed" : ""} `}>
                 LIQUID STAKING
               </button>
             </Tooltip>
@@ -108,7 +108,7 @@ export default function Home() {
               fontStyle: "italic",
               // fontWeight: "bold"
             }} placement="right" overlay={<span> Coming Soon! </span>}>
-              <button className={`relative rounded-full block md:p-4 p-3 sm:my-4 my-1 font-arcade_gamer bg-GREY1 text-GREY2 ${isDisabled ? "brightness-95 cursor-not-allowed" : ""}`} >
+              <button className={`relative rounded-full block md:p-4 p-3 lg:my-4 md:my-2 my-1 font-arcade_gamer bg-GREY1 text-GREY2 ${isDisabled ? "brightness-95 cursor-not-allowed" : ""}`} >
                 DEFI VAULTS
               </button>
             </Tooltip>
