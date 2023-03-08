@@ -47,13 +47,13 @@ export default function Home() {
         </div>
         {/* <div className='w-full h-1/2 absolute bottom-0 bg-gradient-to-b from-transparent to-gray-500 opacity-30 z-20'></div> */}
         {/* Sun */}
-        <div className='absolute left-0 top-[10%] w-full h-32 z-10'>
-          <img src="/imgs/sun.webp" className='sun absolute h-48 top-0 left-52' />
+        <div className='absolute left-0 md:top-[10%] sm:top-[5%] top-[2.5%] w-full h-32 z-10'>
+          <img src="/imgs/sun.webp" className={`sun absolute top-0  ${screenSize == screenSizes.small?" h-32 left-20":" h-48 left-52"}`} />
         </div>
         {/* Clouds */}
-        <div className='absolute left-[-2.5%] top-[10%] w-full h-32 z-10'>
-          <img src="/imgs/cloud_1.png" className='cloud cloud1 absolute h-48 top-0 -left-24' />
-          <img src="/imgs/cloud_1.png" className='cloud absolute h-48 top-12 left-4' />
+        <div className={`absolute left-[-2.5%] md:top-[10%] sm:top-[5%] top-[2.5%] w-full z-10 ${screenSize == screenSizes.small?" h-20":" h-32 "}`}>
+          <img src="/imgs/cloud_1.png" className={`cloud cloud1 absolute top-0 ${screenSize == screenSizes.small?"h-24 -left-12":"h-48 -left-24"}`} />
+          <img src="/imgs/cloud_1.png" className={`cloud absolute top-12 left-4 ${screenSize == screenSizes.small?"h-24 left-2":"h-48 -left-4"} `} />
         </div>
         {
           (screenSize == screenSizes.big) && (
@@ -83,8 +83,8 @@ export default function Home() {
           )}
           {/* rgb(85, 100, 88) */}
           {/* my-12 */}
-          <div className={` relative font-mon italic font-bold text-center text-GREY2 ${screenSize != screenSizes.big ? " text-xl " : " text-3xl "}  my-[1.5%]`}>Yields so good, like you milkin' it. </div>
-          <div className={` relative flex justify-center items-center flex-col ${screenSize != screenSizes.big ? " text-xl " : " text-3xl "} `}>
+          <div className={` relative font-mon italic font-bold text-center text-GREY2 lg:text-3xl md:text-xl sm:text-lg my-[1.5%]`}>Yields so good, like you milkin' it. </div>
+          <div className={` relative flex justify-center items-center flex-col lg:text-3xl md:text-xl sm:text-lg `}>
             <Tooltip overlayInnerStyle={{
               backgroundColor: "white",
               borderRadius: "64px",
@@ -94,7 +94,7 @@ export default function Home() {
               fontStyle: "italic",
               // fontWeight: "bold"
             }} placement="right" overlay={<span> Coming Soon! </span>}>
-              <button className={`relative rounded-full block p-4 my-4 font-arcade_gamer bg-GREEN1 text-GREEN2 ${isDisabled ? "brightness-95 cursor-not-allowed" : ""} `}>
+              <button className={`relative rounded-full block md:p-4 p-3 sm:my-4 my-1 font-arcade_gamer bg-GREEN1 text-GREEN2 ${isDisabled ? "brightness-95 cursor-not-allowed" : ""} `}>
                 LIQUID STAKING
               </button>
             </Tooltip>
@@ -108,41 +108,39 @@ export default function Home() {
               fontStyle: "italic",
               // fontWeight: "bold"
             }} placement="right" overlay={<span> Coming Soon! </span>}>
-              <button className={`relative rounded-full block p-4 my-4 font-arcade_gamer bg-GREY1 text-GREY2 ${isDisabled ? "brightness-95 cursor-not-allowed" : ""}`} >
+              <button className={`relative rounded-full block md:p-4 p-3 sm:my-4 my-1 font-arcade_gamer bg-GREY1 text-GREY2 ${isDisabled ? "brightness-95 cursor-not-allowed" : ""}`} >
                 DEFI VAULTS
               </button>
             </Tooltip>
           </div>
         </div>
         <div className='absolute left-0 bottom-0 w-full h-32 z-10'>
-
-
           {/* <div className='w-full h-full absolute bottom-0 bg-gradient-to-b from-transparent to-gray-800 opacity-50 z-20'></div> */}
           <div className='grass-plane h-16 w-full relative z-10'>
             {screenSize != screenSizes.small && (
               <>
-                <div className='absolute  w-full -bottom-2 left-[10%]'>
+                <div className={`absolute w-full -bottom-2 lg:left-[10%] md:left-[5%]`}>
                   {/* left-40 */}
-                  <img src="/imgs/tree_1.webp" className='tree tree1 absolute h-48 -bottom-2 left-0 '
+                  <img src="/imgs/tree_1.webp" className='tree tree1 absolute lg:h-48 h-36 -bottom-2 left-0 '
                     style={{
                       // transform:"translate(-80% ,0px)"
                     }}
                   />
                   {/* left-36 */}
-                  <img src="/imgs/tree_2.webp" className='tree tree2 absolute h-72 -bottom-2 -left-6'
+                  <img src="/imgs/tree_2.webp" className='tree tree2 absolute lg:h-72 h-60 -bottom-2 -left-6'
                     style={{
                       // transform:"translate(-80% ,0px)"
                     }}
                   />
                   {/* left-60 */}
-                  <img src="/imgs/tree_1.webp" className='tree tree3 absolute h-52 -bottom-2 left-20'
+                  <img src="/imgs/tree_1.webp" className='tree tree3 absolute lg:h-52 h-40 -bottom-2 left-20'
                     style={{
                       // transform:"translate(-80% ,0px)"
                     }}
                   />
                 </div>
                 {/* right-40 */}
-                <img src="/imgs/cool_cow_w.png" className='absolute h-48 bottom-0 right-[10%] animate-bounce'
+                <img src="/imgs/cool_cow_w.png" className={`absolute lg:h-48 h-40 bottom-0 lg:right-[10%] md:right-[5%] animate-bounce`}
                   style={{
                     // transform:"translate(-80% ,0px)"
                   }}
@@ -152,7 +150,7 @@ export default function Home() {
             {/* footer */}
             <div className=' absolute bottom-[15%] w-full z-10'>
               <div className='w-full'>
-                <div className=' flex items-center justify-center h-16 z-20'>
+                <div className=' flex items-center justify-center md:h-16 sm:h-12 h-12 z-20'>
                   <Link href={"https://twitter.com/smoovefinance"} target="_blank" rel="noopener noreferrer"
                     className="h-full"
                   >
@@ -161,8 +159,8 @@ export default function Home() {
                     </button>
                   </Link>
 
-                  <button className='h-full mx-4 bg-black rounded-lg p-3'>
-                    <img className="h-full" src="/icons/icon_discord.svg" />
+                  <button className='h-full mx-4 bg-black rounded-lg md:p-3 p-2'>
+                    <img className="h-full " src="/icons/icon_discord.svg" />
                   </button>
                   <Link href="https://smoove.gitbook.io/smoove-docs/" target="_blank" rel="noopener noreferrer"
                     className="h-full"

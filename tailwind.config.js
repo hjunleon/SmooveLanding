@@ -16,6 +16,9 @@ module.exports = {
         GREY2: "#545454",
         GREEN1: "#CDEFE8",
         GREEN2: "#00C49C",
+      },
+      screens:{
+        'small_hp': '400px'
       }
     },
   },
