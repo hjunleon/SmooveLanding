@@ -78,7 +78,7 @@ export default function Home() {
         <meta name="description" content="StakeFi on Sui" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:title" content="SMOOVE" />
-        <meta property="og:description" content="GStakeFi on Sui" />
+        <meta property="og:description" content="StakeFi on Sui" />
         <meta property="og:image" content="/imgs/cool_cow_w.png" />
       </Head>
       <div className="h-screen w-screen relative bg-white overflow-hidden flex items-center justify-center">
